@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>迷因產生器</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">迷因產生器</h1>
+        
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <input type="file" class="form-control" id="imageInput" accept="image/*">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="topText" placeholder="上方文字">
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="bottomText" placeholder="下方文字">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">文字顏色</label>
+                            <input type="color" class="form-control form-control-color" id="textColor" value="#ffffff">
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-primary" id="generateBtn">產生迷因</button>
+                            <button class="btn btn-success ms-2" id="downloadBtn">下載</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-4 text-center">
+                    <canvas id="memeCanvas" class="img-fluid"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
